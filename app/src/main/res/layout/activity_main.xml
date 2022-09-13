@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/game_board_image"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTurn"
+        app:srcCompat="@drawable/board" />
+
+    <ImageView
+        android:id="@+id/iv00"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv22"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintBottom_toBottomOf="@+id/iv21"
+        app:layout_constraintStart_toEndOf="@+id/iv21"
+        app:layout_constraintTop_toTopOf="@+id/iv21"
+        tools:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv21"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintBottom_toBottomOf="@+id/iv20"
+        app:layout_constraintStart_toEndOf="@+id/iv20"
+        app:layout_constraintTop_toTopOf="@+id/iv20"
+        tools:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/iv20"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintStart_toStartOf="@+id/iv00"
+        app:layout_constraintTop_toBottomOf="@+id/iv10"
+        tools:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv12"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintBottom_toBottomOf="@+id/iv10"
+        app:layout_constraintStart_toEndOf="@+id/iv11"
+        app:layout_constraintTop_toTopOf="@+id/iv10"
+        tools:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/iv11"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintBottom_toBottomOf="@+id/iv10"
+        app:layout_constraintStart_toEndOf="@+id/iv10"
+        app:layout_constraintTop_toTopOf="@+id/iv10"
+        tools:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv10"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginTop="38dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintStart_toStartOf="@+id/iv00"
+        app:layout_constraintTop_toBottomOf="@+id/iv00"
+        tools:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/iv02"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintBottom_toBottomOf="@+id/iv00"
+        app:layout_constraintStart_toEndOf="@+id/iv01"
+        app:layout_constraintTop_toTopOf="@+id/iv00"
+        tools:srcCompat="@drawable/cross" />
+
+    <ImageView
+        android:id="@+id/iv01"
+        android:layout_width="@dimen/item_size"
+        android:layout_height="@dimen/item_size"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/cell_board_button"
+        app:layout_constraintBottom_toBottomOf="@+id/iv00"
+        app:layout_constraintStart_toEndOf="@+id/iv00"
+        app:layout_constraintTop_toTopOf="@+id/iv00"
+        tools:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/tvTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/turn"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTurn"
+        android:layout_width="@dimen/item_size_turn"
+        android:layout_height="@dimen/item_size_turn"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTurn"
+        app:layout_constraintStart_toEndOf="@+id/tvTurn"
+        app:layout_constraintTop_toTopOf="@+id/tvTurn"
+        app:srcCompat="@drawable/cross" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
